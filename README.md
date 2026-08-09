@@ -94,6 +94,7 @@ cd optgis-geodata-pipeline
 The pipeline relies on raw data from the 2024 Brazil's School Census. You can download the official dataset directly from INEP:
 
 - **[Download Brazil's School Census 2024 Microdata (ZIP)](https://download.inep.gov.br/dados_abertos/microdados_censo_escolar_2024.zip)**
+- **[INEP Official Microdata Portal](https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/censo-escolar)**
 
 After downloading, extract the files and place the raw dataset inside the following directory structure:
 
