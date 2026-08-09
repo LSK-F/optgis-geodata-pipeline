@@ -239,7 +239,3 @@ optgis-geodata-pipeline/
 └── uv.lock
 ```
 Note: Raw datasets and large processed files (.csv, .gpkg) are ignored in version control via .gitignore to keep the repository lightweight. They are generated locally when running the pipeline.
-
-## 📜 License
-
-*Add the project license here, if applicable.*
