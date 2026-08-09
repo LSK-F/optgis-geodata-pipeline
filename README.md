@@ -90,7 +90,20 @@ cd optgis-geodata-pipeline
 
 ---
 
-### 2. Install Python dependencies
+### 2. Download the data
+The pipeline relies on raw data from the 2024 Brazil's School Census. You can download the official dataset directly from INEP:
+
+- **[Download Censo Escolar 2024 Microdata (ZIP)](https://download.inep.gov.br/dados_abertos/microdados_censo_escolar_2024.zip)**
+
+After downloading, extract the files and place the raw dataset inside the following directory structure:
+
+```text
+data/raw/
+```
+
+---
+
+### 3. Install Python dependencies
 
 From the project root:
 
@@ -106,7 +119,7 @@ This command uses `uv.lock` to install the pinned Python dependencies and create
 
 ---
 
-### 3. Install R dependencies
+### 4. Install R dependencies
 
 Run the provided installation script:
 
@@ -196,46 +209,3 @@ The final interactive map is exported to:
 ```text
 data/processed/map_censo_interactive.html
 ```
-
----
-
-## Project structure
-
-```text
-optgis-geodata-pipeline/
-│
-├── data/
-│   ├── raw/
-│   │   ├── dicionário_dados_educação_básica.xlsx
-│   │   └── microdados_ed_basica_2024.csv
-│   │
-│   └── processed/
-│       ├── censo_escolar_2024_RJ_Endereços&Matrículas.csv
-│       ├── censo_escolar_geocodificado.gpkg
-│       └── map_censo_interactive.html
-│
-├── notebooks/
-│   └── 03_analise_censo.ipynb
-│
-├── src/
-│   ├── etl/
-│   │   ├── __init__.py
-│   │   └── 01_etl_censo_escolar.py
-│   │
-│   ├── geocoding/
-│   │   └── 02_geocode_r_engine.R
-│   │
-│   ├── visualization/
-│   │   ├── __init__.py
-│   │   └── hexbin_maps.py
-│   │
-│   ├── __init__.py
-│   └── install_r_dependencies.R
-│
-├── .gitignore
-├── .python-version
-├── pyproject.toml
-├── README.md
-└── uv.lock
-```
-Note: Raw datasets and large processed files (.csv, .gpkg) are ignored in version control via .gitignore to keep the repository lightweight. They are generated locally when running the pipeline.
