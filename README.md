@@ -1,4 +1,4 @@
-# 🌍 OptGIS Geodata Pipeline
+# 🌍 OPTGIS Geodata Pipeline
 
 A hybrid geospatial data engineering pipeline, developed with Python and R, for the preparation, geocoding, and spatial analysis of urban datasets.
 
