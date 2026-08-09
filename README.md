@@ -151,7 +151,7 @@ After the address data has been prepared, run the R-based geocoding engine:
 ```bash
 Rscript src/geocoding/02_geocode_r_engine.R
 ```
-
+Or
 ```R
 source("src/geocoding/02_geocode_r_engine.R")
 ```
